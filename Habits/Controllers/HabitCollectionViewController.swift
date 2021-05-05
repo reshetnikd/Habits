@@ -34,5 +34,24 @@ class HabitCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func update() {
+        HabitRequest().send { result in
+            switch result {
+                case .success(let habits):
+                    self.model.habitsByName = habits
+                case .failure:
+                    self.model.habitsByName = [:]
+            }
+            
+            DispatchQueue.main.async {
+                self.updateCollectionView()
+            }
+        }
+    }
+    
+    func updateCollectionView() {
+        
+    }
 
 }
