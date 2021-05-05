@@ -18,6 +18,9 @@
 		35CD7EA726417D0A00724B33 /* LogHabitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EA626417D0A00724B33 /* LogHabitCollectionViewController.swift */; };
 		35CD7EA926417DC700724B33 /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EA826417DC700724B33 /* HabitDetailViewController.swift */; };
 		35CD7EAB26417DD500724B33 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EAA26417DD500724B33 /* UserDetailViewController.swift */; };
+		35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EAD26427B6E00724B33 /* Habit.swift */; };
+		35CD7EB026427BBE00724B33 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EAF26427BBE00724B33 /* Category.swift */; };
+		35CD7EB226427BDD00724B33 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EB126427BDD00724B33 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		35CD7EA626417D0A00724B33 /* LogHabitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHabitCollectionViewController.swift; sourceTree = "<group>"; };
 		35CD7EA826417DC700724B33 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
 		35CD7EAA26417DD500724B33 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		35CD7EAD26427B6E00724B33 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		35CD7EAF26427BBE00724B33 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		35CD7EB126427BDD00724B33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			children = (
 				35A022C2263C92BB000535D0 /* AppDelegate.swift */,
 				35A022C4263C92BB000535D0 /* SceneDelegate.swift */,
+				35CD7EB326427C1C00724B33 /* Model */,
 				35CD7EAC26417EAE00724B33 /* Controllers */,
 				35A022CB263C92BC000535D0 /* Assets.xcassets */,
 				35A022C8263C92BB000535D0 /* Main.storyboard */,
@@ -88,6 +95,16 @@
 				35CD7EAA26417DD500724B33 /* UserDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		35CD7EB326427C1C00724B33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35CD7EAD26427B6E00724B33 /* Habit.swift */,
+				35CD7EAF26427BBE00724B33 /* Category.swift */,
+				35CD7EB126427BDD00724B33 /* Color.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,11 +178,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CD7EA726417D0A00724B33 /* LogHabitCollectionViewController.swift in Sources */,
+				35CD7EB026427BBE00724B33 /* Category.swift in Sources */,
+				35CD7EB226427BDD00724B33 /* Color.swift in Sources */,
 				35CD7EA126417CF000724B33 /* HomeCollectionViewController.swift in Sources */,
 				35CD7EAB26417DD500724B33 /* UserDetailViewController.swift in Sources */,
 				35CD7EA326417CF900724B33 /* HabitCollectionViewController.swift in Sources */,
 				35A022C3263C92BB000535D0 /* AppDelegate.swift in Sources */,
 				35A022C5263C92BB000535D0 /* SceneDelegate.swift in Sources */,
+				35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */,
 				35CD7EA926417DC700724B33 /* HabitDetailViewController.swift in Sources */,
 				35CD7EA526417CFF00724B33 /* UserCollectionViewController.swift in Sources */,
 			);
