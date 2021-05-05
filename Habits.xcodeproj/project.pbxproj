@@ -21,6 +21,7 @@
 		35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EAD26427B6E00724B33 /* Habit.swift */; };
 		35CD7EB026427BBE00724B33 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EAF26427BBE00724B33 /* Category.swift */; };
 		35CD7EB226427BDD00724B33 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EB126427BDD00724B33 /* Color.swift */; };
+		35CD7EB526427CCE00724B33 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EB426427CCE00724B33 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		35CD7EAD26427B6E00724B33 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		35CD7EAF26427BBE00724B33 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		35CD7EB126427BDD00724B33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		35CD7EB426427CCE00724B33 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = Habits/APIRequest.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		35A022C1263C92BB000535D0 /* Habits */ = {
 			isa = PBXGroup;
 			children = (
+				35CD7EB426427CCE00724B33 /* APIRequest.swift */,
 				35A022C2263C92BB000535D0 /* AppDelegate.swift */,
 				35A022C4263C92BB000535D0 /* SceneDelegate.swift */,
 				35CD7EB326427C1C00724B33 /* Model */,
@@ -187,6 +190,7 @@
 				35A022C5263C92BB000535D0 /* SceneDelegate.swift in Sources */,
 				35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */,
 				35CD7EA926417DC700724B33 /* HabitDetailViewController.swift in Sources */,
+				35CD7EB526427CCE00724B33 /* APIRequest.swift in Sources */,
 				35CD7EA526417CFF00724B33 /* UserCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
