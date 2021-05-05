@@ -12,3 +12,5 @@ struct Habit {
     let category: Category
     let info: String
 }
+
+extension Habit: Codable { }
