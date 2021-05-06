@@ -29,9 +29,13 @@ class HabitCollectionViewController: UICollectionViewController {
             }
         }
         
-        struct Item: Hashable, Equatable {
+        struct Item: Hashable, Equatable, Comparable {
             let habit: Habit
             let isFavorite: Bool
+            
+            static func < (lhs: Item, rhs: Item) -> Bool {
+                return lhs.habit < rhs.habit
+            }
         }
     }
     
@@ -47,6 +51,16 @@ class HabitCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataSource = createDataSource()
+        collectionView.dataSource = dataSource
+        collectionView.collectionViewLayout = createLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        update()
     }
     
     func update() {
@@ -65,7 +79,7 @@ class HabitCollectionViewController: UICollectionViewController {
     }
     
     func updateCollectionView() {
-        let itemsBySection = model.habitsByName.values.reduce(into: [ViewModel.Section: [ViewModel.Item]]()) { partial, habit in
+        var itemsBySection = model.habitsByName.values.reduce(into: [ViewModel.Section: [ViewModel.Item]]()) { partial, habit in
             let section: ViewModel.Section
             let item: ViewModel.Item
             
@@ -79,10 +93,36 @@ class HabitCollectionViewController: UICollectionViewController {
             
             partial[section, default: []].append(item)
         }
+        itemsBySection = itemsBySection.mapValues { $0.sorted() }
         
         let sectionIDs = itemsBySection.keys.sorted()
         
         dataSource.applySnapshotUsing(sectionIDs: sectionIDs, itemsBySection: itemsBySection)
+    }
+    
+    func createDataSource() -> DataSourceType {
+        let dataSource = DataSourceType(collectionView: collectionView) { collectionView, indexPath, item in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Habit", for: indexPath) as! PrimarySecondaryTextCollectionViewCell
+            
+            cell.primaryTextLabel.text = item.habit.name
+            
+            return cell
+        }
+        
+        return dataSource
+    }
+    
+    func createLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        
+        return UICollectionViewCompositionalLayout(section: section)
     }
 
 }
