@@ -25,6 +25,7 @@
 		35CD7EB72642CB4100724B33 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EB62642CB4100724B33 /* APIService.swift */; };
 		35CD7EB92642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */; };
 		35CD7EBC264301A600724B33 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBB264301A600724B33 /* Settings.swift */; };
+		35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		35CD7EB62642CB4100724B33 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySecondaryTextCollectionViewCell.swift; sourceTree = "<group>"; };
 		35CD7EBB264301A600724B33 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVieDiffableDataSource+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				35CD7EBB264301A600724B33 /* Settings.swift */,
 				35CD7EB426427CCE00724B33 /* APIRequest.swift */,
 				35CD7EB62642CB4100724B33 /* APIService.swift */,
+				35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */,
 				35CD7EBA2642CDA500724B33 /* Views */,
 				35CD7EB326427C1C00724B33 /* Model */,
 				35CD7EAC26417EAE00724B33 /* Controllers */,
@@ -206,6 +209,7 @@
 				35A022C3263C92BB000535D0 /* AppDelegate.swift in Sources */,
 				35CD7EB92642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift in Sources */,
 				35A022C5263C92BB000535D0 /* SceneDelegate.swift in Sources */,
+				35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */,
 				35CD7EBC264301A600724B33 /* Settings.swift in Sources */,
 				35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */,
 				35CD7EB72642CB4100724B33 /* APIService.swift in Sources */,
