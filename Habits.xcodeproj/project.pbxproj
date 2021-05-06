@@ -26,6 +26,7 @@
 		35CD7EB92642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */; };
 		35CD7EBC264301A600724B33 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBB264301A600724B33 /* Settings.swift */; };
 		35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */; };
+		35CD7EC0264428F500724B33 /* NameSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySecondaryTextCollectionViewCell.swift; sourceTree = "<group>"; };
 		35CD7EBB264301A600724B33 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVieDiffableDataSource+ViewModel.swift"; sourceTree = "<group>"; };
+		35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		35CD7EBA2642CDA500724B33 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */,
 				35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CD7EC0264428F500724B33 /* NameSectionHeaderView.swift in Sources */,
 				35CD7EA726417D0A00724B33 /* LogHabitCollectionViewController.swift in Sources */,
 				35CD7EB026427BBE00724B33 /* Category.swift in Sources */,
 				35CD7EB226427BDD00724B33 /* Color.swift in Sources */,

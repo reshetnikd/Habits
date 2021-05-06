@@ -8,6 +8,8 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+private let sectionHeaderKind = "SectionHeader"
+private let sectionHeaderIdentifier = "HeaderView"
 
 class HabitCollectionViewController: UICollectionViewController {
     typealias DataSourceType = UICollectionViewDiffableDataSource<ViewModel.Section, ViewModel.Item>
@@ -55,6 +57,8 @@ class HabitCollectionViewController: UICollectionViewController {
         dataSource = createDataSource()
         collectionView.dataSource = dataSource
         collectionView.collectionViewLayout = createLayout()
+        
+        collectionView.register(NameSectionHeaderView.self, forSupplementaryViewOfKind: sectionHeaderKind, withReuseIdentifier: sectionHeaderIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,6 +113,21 @@ class HabitCollectionViewController: UICollectionViewController {
             return cell
         }
         
+        dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: sectionHeaderKind, withReuseIdentifier: sectionHeaderIdentifier, for: indexPath) as! NameSectionHeaderView
+            
+            let section = dataSource.snapshot().sectionIdentifiers[indexPath.section]
+            
+            switch section {
+                case .favorites:
+                    header.nameLabel.text = "Favorites"
+                case .category(let category):
+                    header.nameLabel.text = category.name
+            }
+            
+            return header
+        }
+        
         return dataSource
     }
     
@@ -119,8 +138,13 @@ class HabitCollectionViewController: UICollectionViewController {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(36))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: sectionHeaderKind, alignment: .top)
+        sectionHeader.pinToVisibleBounds = true
+        
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        section.boundarySupplementaryItems = [sectionHeader]
         
         return UICollectionViewCompositionalLayout(section: section)
     }
