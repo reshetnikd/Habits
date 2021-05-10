@@ -109,6 +109,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2R7-yv-Lwh" firstAttribute="leading" secondItem="yhY-jT-9oO" secondAttribute="leading" constant="8" id="b7y-sf-Mda"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2R7-yv-Lwh" secondAttribute="trailing" constant="20" symbolic="YES" id="fZg-Hb-EJ6"/>
                                         <constraint firstItem="2R7-yv-Lwh" firstAttribute="centerY" secondItem="yhY-jT-9oO" secondAttribute="centerY" id="geT-c3-cEz"/>
                                     </constraints>
                                 </collectionViewCellContentView>
@@ -178,14 +179,27 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NS6-yh-Egs">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="User" id="NS6-yh-Egs" customClass="PrimarySecondaryTextCollectionViewCell" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P4H-dp-r1U">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOd-cb-Xw5">
+                                            <rect key="frame" x="43" y="53.666666666666657" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LOd-cb-Xw5" firstAttribute="centerY" secondItem="P4H-dp-r1U" secondAttribute="centerY" id="b2H-YV-0DK"/>
+                                        <constraint firstItem="LOd-cb-Xw5" firstAttribute="centerX" secondItem="P4H-dp-r1U" secondAttribute="centerX" id="wVN-Sa-qap"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
+                                    <outlet property="primaryTextLabel" destination="LOd-cb-Xw5" id="rhX-IK-Qrv"/>
                                     <segue destination="8Ck-hY-6Y9" kind="show" id="0rk-2z-QnG"/>
                                 </connections>
                             </collectionViewCell>

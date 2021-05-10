@@ -21,6 +21,15 @@ struct Settings {
         }
     }
     
+    var followedUserIDs: [String] {
+        get {
+            return unarchiveJSON(key: Setting.followedUserIDs) ?? []
+        }
+        set {
+            archiveJSON(value: newValue, key: Setting.followedUserIDs)
+        }
+    }
+    
     private func archiveJSON<T: Encodable>(value: T, key: String) {
         let data = try! JSONEncoder().encode(value)
         let string = String(data: data, encoding: .utf8)
@@ -51,4 +60,5 @@ struct Settings {
 
 enum Setting {
     static let favoriteHabits = "favoriteHabits"
+    static let followedUserIDs = "followedUserIDs"
 }

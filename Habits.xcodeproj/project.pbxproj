@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3531F1D02649BA6C00BF62D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3531F1CF2649BA6C00BF62D2 /* User.swift */; };
 		35A022C3263C92BB000535D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A022C2263C92BB000535D0 /* AppDelegate.swift */; };
 		35A022C5263C92BB000535D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A022C4263C92BB000535D0 /* SceneDelegate.swift */; };
 		35A022CA263C92BB000535D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A022C8263C92BB000535D0 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3531F1CF2649BA6C00BF62D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		35A022BF263C92BB000535D0 /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A022C2263C92BB000535D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35A022C4263C92BB000535D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		35CD7EAD26427B6E00724B33 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		35CD7EAF26427BBE00724B33 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		35CD7EB126427BDD00724B33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		35CD7EB426427CCE00724B33 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = Habits/APIRequest.swift; sourceTree = SOURCE_ROOT; };
+		35CD7EB426427CCE00724B33 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = "Habits/Supporting Files/APIRequest.swift"; sourceTree = SOURCE_ROOT; };
 		35CD7EB62642CB4100724B33 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySecondaryTextCollectionViewCell.swift; sourceTree = "<group>"; };
 		35CD7EBB264301A600724B33 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -65,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3531F1CE2649B99F00BF62D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35CD7EBB264301A600724B33 /* Settings.swift */,
+				35CD7EB426427CCE00724B33 /* APIRequest.swift */,
+				35CD7EB62642CB4100724B33 /* APIService.swift */,
+				35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		35A022B6263C92BB000535D0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +99,7 @@
 			children = (
 				35A022C2263C92BB000535D0 /* AppDelegate.swift */,
 				35A022C4263C92BB000535D0 /* SceneDelegate.swift */,
-				35CD7EBB264301A600724B33 /* Settings.swift */,
-				35CD7EB426427CCE00724B33 /* APIRequest.swift */,
-				35CD7EB62642CB4100724B33 /* APIService.swift */,
-				35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */,
+				3531F1CE2649B99F00BF62D2 /* Supporting Files */,
 				35CD7EBA2642CDA500724B33 /* Views */,
 				35CD7EB326427C1C00724B33 /* Model */,
 				35CD7EAC26417EAE00724B33 /* Controllers */,
@@ -120,6 +130,7 @@
 				35CD7EAD26427B6E00724B33 /* Habit.swift */,
 				35CD7EAF26427BBE00724B33 /* Category.swift */,
 				35CD7EB126427BDD00724B33 /* Color.swift */,
+				3531F1CF2649BA6C00BF62D2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 				35CD7EBC264301A600724B33 /* Settings.swift in Sources */,
 				35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */,
 				35CD7EB72642CB4100724B33 /* APIService.swift in Sources */,
+				3531F1D02649BA6C00BF62D2 /* User.swift in Sources */,
 				35CD7EA926417DC700724B33 /* HabitDetailViewController.swift in Sources */,
 				35CD7EB526427CCE00724B33 /* APIRequest.swift in Sources */,
 				35CD7EA526417CFF00724B33 /* UserCollectionViewController.swift in Sources */,
