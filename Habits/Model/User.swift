@@ -25,3 +25,9 @@ extension User: Hashable {
         hasher.combine(id)
     }
 }
+
+extension User: Comparable {
+    static func < (lhs: User, rhs: User) -> Bool {
+        return lhs.name < rhs.name
+    }
+}

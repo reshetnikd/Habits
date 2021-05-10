@@ -34,5 +34,30 @@ class UserCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func update() {
+        UserRequest().send { result in
+            switch result {
+                case .success(let users):
+                    self.model.userByID = users
+                case .failure:
+                    self.model.userByID = [:]
+            }
+            
+            DispatchQueue.main.async {
+                self.updateCollectionView()
+            }
+        }
+    }
+    
+    func updateCollectionView() {
+        let users = model.userByID.values.sorted().reduce(into: [ViewModel.Item]()) { partial, user in
+            partial.append(ViewModel.Item(user: user, isFollowed: model.followedUsers.contains(user)))
+        }
+        
+        let itemsBySection = [0: users]
+        
+        dataSource.applySnapshotUsing(sectionIDs: [0], itemsBySection: itemsBySection)
+    }
 
 }
