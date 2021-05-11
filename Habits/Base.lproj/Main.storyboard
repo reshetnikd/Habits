@@ -290,7 +290,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="primaryTextLabel" destination="LOd-cb-Xw5" id="rhX-IK-Qrv"/>
-                                    <segue destination="8Ck-hY-6Y9" kind="show" id="0rk-2z-QnG"/>
+                                    <segue destination="8Ck-hY-6Y9" kind="show" destinationCreationSelector="showUserDetail:sender:" id="0rk-2z-QnG"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
