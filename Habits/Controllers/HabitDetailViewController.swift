@@ -68,6 +68,26 @@ class HabitDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func update() {
+        HabitStatisticsRequest(habitNames: [habit.name]).send { result in
+            if case .success(let statistics) = result, statistics.count > 0 {
+                self.model.habitStatistics = statistics[0]
+            } else {
+                self.model.habitStatistics = nil
+            }
+            
+            DispatchQueue.main.async {
+                self.updateCollectionView()
+            }
+        }
+    }
+    
+    func updateCollectionView() {
+        let items = (self.model.habitStatistics?.userCounts.map { ViewModel.Item.single($0) } ?? []).sorted(by: >)
+        
+        dataSource.applySnapshotUsing(sectionIDs: [.remaining], itemsBySection: [.remaining: items])
+    }
+    
 
     /*
     // MARK: - Navigation

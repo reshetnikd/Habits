@@ -202,6 +202,7 @@
                                                 <constraint firstItem="y9N-n5-1Kg" firstAttribute="leading" secondItem="gzv-37-6Ou" secondAttribute="leading" constant="8" id="F9g-rF-IdI"/>
                                                 <constraint firstItem="mRD-Fb-dqV" firstAttribute="firstBaseline" secondItem="y9N-n5-1Kg" secondAttribute="firstBaseline" id="rQs-F6-xsC"/>
                                                 <constraint firstAttribute="trailing" secondItem="mRD-Fb-dqV" secondAttribute="trailing" constant="8" id="ugn-cS-IGL"/>
+                                                <constraint firstItem="mRD-Fb-dqV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y9N-n5-1Kg" secondAttribute="trailing" constant="8" symbolic="YES" id="y7q-zP-d8Q"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
