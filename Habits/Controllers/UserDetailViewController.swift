@@ -60,6 +60,59 @@ class UserDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func update() {
+        UserStatisticsRequest(userIDs: [user.id]).send { result in
+            switch result {
+                case .success(let userStats):
+                    self.model.userStats = userStats[0]
+                case .failure:
+                    self.model.userStats = nil
+            }
+            
+            DispatchQueue.main.async {
+                self.updateCollectionView()
+            }
+        }
+        
+        HabitLeadStatisticsRequest(userID: user.id).send { result in
+            switch result {
+                case .success(let userStats):
+                    self.model.leadingStats = userStats
+                case .failure:
+                    self.model.leadingStats = nil
+            }
+            
+            DispatchQueue.main.async {
+                self.updateCollectionView()
+            }
+        }
+    }
+    
+    func updateCollectionView() {
+        guard let userStatistics = model.userStats,
+              let leadingStatistics = model.leadingStats else {
+            return
+        }
+        
+        var itemsBySection = userStatistics.habitCounts.reduce(into: [ViewModel.Section: [ViewModel.Item]]()) { partial, habitCount in
+            let section: ViewModel.Section
+            
+            if leadingStatistics.habitCounts.contains(habitCount) {
+                section = .leading
+            } else {
+                section = .category(habitCount.habit.category)
+            }
+            
+            partial[section, default: []].append(habitCount)
+        }
+        
+        itemsBySection = itemsBySection.mapValues { $0.sorted() }
+        
+        let sectionIDs = itemsBySection.keys.sorted()
+        
+        dataSource.applySnapshotUsing(sectionIDs: sectionIDs, itemsBySection: itemsBySection)
+    }
+    
 
     /*
     // MARK: - Navigation
