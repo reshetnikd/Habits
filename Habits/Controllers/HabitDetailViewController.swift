@@ -57,6 +57,12 @@ class HabitDetailViewController: UIViewController {
         nameLabel.text = habit.name
         categoryLabel.text = habit.category.name
         infoLabel.text = habit.info
+        
+        dataSource = createDataSource()
+        collectionView.dataSource = dataSource
+        collectionView.collectionViewLayout = createLayout()
+        
+        update()
     }
     
     init?(coder: NSCoder, habit: Habit) {
@@ -86,6 +92,38 @@ class HabitDetailViewController: UIViewController {
         let items = (self.model.habitStatistics?.userCounts.map { ViewModel.Item.single($0) } ?? []).sorted(by: >)
         
         dataSource.applySnapshotUsing(sectionIDs: [.remaining], itemsBySection: [.remaining: items])
+    }
+    
+    func createDataSource() -> DataSourceType {
+        let dataSource = DataSourceType(collectionView: collectionView) { collectionView, indexPath, grouping in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCount", for: indexPath) as! PrimarySecondaryTextCollectionViewCell
+            
+            switch grouping {
+                case .single(let userStat):
+                    cell.primaryTextLabel.text = userStat.user.name
+                    cell.secondaryTextLabel.text = "\(userStat.count)"
+                default:
+                    break
+            }
+            
+            return cell
+        }
+        
+        return dataSource
+    }
+    
+    func createLayout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
+        
+        return UICollectionViewCompositionalLayout(section: section)
     }
     
 
