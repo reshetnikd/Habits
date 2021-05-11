@@ -116,7 +116,7 @@
                                 <size key="customSize" width="375" height="50"/>
                                 <connections>
                                     <outlet property="primaryTextLabel" destination="2R7-yv-Lwh" id="KXi-IM-wFD"/>
-                                    <segue destination="zw3-Qk-W6b" kind="show" id="qA2-fu-BII"/>
+                                    <segue destination="zw3-Qk-W6b" kind="show" destinationCreationSelector="showHabitDetail:sender:" id="qA2-fu-BII"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

@@ -164,4 +164,12 @@ class HabitCollectionViewController: UICollectionViewController {
         return UICollectionViewCompositionalLayout(section: section)
     }
 
+    @IBSegueAction func showHabitDetail(_ coder: NSCoder, sender: UICollectionViewCell?) -> HabitDetailViewController? {
+        guard let cell = sender,
+              let indexPath = collectionView.indexPath(for: cell),
+              let item = dataSource.itemIdentifier(for: indexPath) else {
+            return nil
+        }
+        return HabitDetailViewController(coder: coder, habit: item.habit)
+    }
 }
