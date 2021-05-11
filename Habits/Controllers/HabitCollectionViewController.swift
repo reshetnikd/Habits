@@ -7,7 +7,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 private let sectionHeaderKind = "SectionHeader"
 private let sectionHeaderIdentifier = "HeaderView"
 
