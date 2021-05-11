@@ -58,7 +58,7 @@ class HabitCollectionViewController: UICollectionViewController {
         collectionView.dataSource = dataSource
         collectionView.collectionViewLayout = createLayout()
         
-        collectionView.register(NameSectionHeaderView.self, forSupplementaryViewOfKind: sectionHeaderKind, withReuseIdentifier: sectionHeaderIdentifier)
+        collectionView.register(NamedSectionHeaderView.self, forSupplementaryViewOfKind: sectionHeaderKind, withReuseIdentifier: sectionHeaderIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -129,7 +129,7 @@ class HabitCollectionViewController: UICollectionViewController {
         }
         
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: sectionHeaderKind, withReuseIdentifier: sectionHeaderIdentifier, for: indexPath) as! NameSectionHeaderView
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: sectionHeaderKind, withReuseIdentifier: sectionHeaderIdentifier, for: indexPath) as! NamedSectionHeaderView
             
             let section = dataSource.snapshot().sectionIdentifiers[indexPath.section]
             

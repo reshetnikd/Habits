@@ -1,5 +1,5 @@
 //
-//  NameSectionHeaderView.swift
+//  NamedSectionHeaderView.swift
 //  Habits
 //
 //  Created by Dmitry Reshetnik on 06.05.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NameSectionHeaderView: UICollectionReusableView {
+class NamedSectionHeaderView: UICollectionReusableView {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
