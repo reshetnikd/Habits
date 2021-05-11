@@ -50,6 +50,7 @@ class HabitDetailViewController: UIViewController {
     var dataSource: DataSourceType!
     var model = Model()
     var habit: Habit!
+    var updateTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,23 @@ class HabitDetailViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
         
         update()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        update()
+        
+        updateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.update()
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        updateTimer?.invalidate()
+        updateTimer = nil
     }
     
     init?(coder: NSCoder, habit: Habit) {
