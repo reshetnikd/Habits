@@ -30,6 +30,8 @@
 		35CD7EC0264428F500724B33 /* NameSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */; };
 		35DAD178264A7D44000A9C79 /* HabitStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD177264A7D44000A9C79 /* HabitStatistics.swift */; };
 		35DAD17A264A7D80000A9C79 /* UserCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD179264A7D80000A9C79 /* UserCount.swift */; };
+		35DAD17C264AA594000A9C79 /* UserStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD17B264AA594000A9C79 /* UserStatistics.swift */; };
+		35DAD17E264AA5DA000A9C79 /* HabitCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD17D264AA5DA000A9C79 /* HabitCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSectionHeaderView.swift; sourceTree = "<group>"; };
 		35DAD177264A7D44000A9C79 /* HabitStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStatistics.swift; sourceTree = "<group>"; };
 		35DAD179264A7D80000A9C79 /* UserCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCount.swift; sourceTree = "<group>"; };
+		35DAD17B264AA594000A9C79 /* UserStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatistics.swift; sourceTree = "<group>"; };
+		35DAD17D264AA5DA000A9C79 /* HabitCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +136,13 @@
 			isa = PBXGroup;
 			children = (
 				35CD7EAD26427B6E00724B33 /* Habit.swift */,
+				35DAD17D264AA5DA000A9C79 /* HabitCount.swift */,
 				35DAD177264A7D44000A9C79 /* HabitStatistics.swift */,
 				35CD7EAF26427BBE00724B33 /* Category.swift */,
 				35CD7EB126427BDD00724B33 /* Color.swift */,
 				3531F1CF2649BA6C00BF62D2 /* User.swift */,
 				35DAD179264A7D80000A9C79 /* UserCount.swift */,
+				35DAD17B264AA594000A9C79 /* UserStatistics.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 				35DAD17A264A7D80000A9C79 /* UserCount.swift in Sources */,
 				35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */,
 				35CD7EBC264301A600724B33 /* Settings.swift in Sources */,
+				35DAD17C264AA594000A9C79 /* UserStatistics.swift in Sources */,
+				35DAD17E264AA5DA000A9C79 /* HabitCount.swift in Sources */,
 				35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */,
 				35CD7EB72642CB4100724B33 /* APIService.swift in Sources */,
 				3531F1D02649BA6C00BF62D2 /* User.swift in Sources */,
