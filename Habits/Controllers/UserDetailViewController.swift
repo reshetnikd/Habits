@@ -13,10 +13,22 @@ class UserDetailViewController: UIViewController {
     @IBOutlet var bioLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
     
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        userNameLabel.text = user.name
+        bioLabel.text = user.bio
+    }
+    
+    init?(coder: NSCoder, user: User) {
+        self.user = user
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 
