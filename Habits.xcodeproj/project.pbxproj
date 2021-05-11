@@ -28,6 +28,8 @@
 		35CD7EBC264301A600724B33 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBB264301A600724B33 /* Settings.swift */; };
 		35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */; };
 		35CD7EC0264428F500724B33 /* NameSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */; };
+		35DAD178264A7D44000A9C79 /* HabitStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD177264A7D44000A9C79 /* HabitStatistics.swift */; };
+		35DAD17A264A7D80000A9C79 /* UserCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD179264A7D80000A9C79 /* UserCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		35CD7EBB264301A600724B33 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		35CD7EBD26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVieDiffableDataSource+ViewModel.swift"; sourceTree = "<group>"; };
 		35CD7EBF264428F500724B33 /* NameSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSectionHeaderView.swift; sourceTree = "<group>"; };
+		35DAD177264A7D44000A9C79 /* HabitStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStatistics.swift; sourceTree = "<group>"; };
+		35DAD179264A7D80000A9C79 /* UserCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +120,10 @@
 			children = (
 				35CD7EA026417CF000724B33 /* HomeCollectionViewController.swift */,
 				35CD7EA226417CF900724B33 /* HabitCollectionViewController.swift */,
-				35CD7EA426417CFF00724B33 /* UserCollectionViewController.swift */,
-				35CD7EA626417D0A00724B33 /* LogHabitCollectionViewController.swift */,
 				35CD7EA826417DC700724B33 /* HabitDetailViewController.swift */,
+				35CD7EA426417CFF00724B33 /* UserCollectionViewController.swift */,
 				35CD7EAA26417DD500724B33 /* UserDetailViewController.swift */,
+				35CD7EA626417D0A00724B33 /* LogHabitCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,9 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				35CD7EAD26427B6E00724B33 /* Habit.swift */,
+				35DAD177264A7D44000A9C79 /* HabitStatistics.swift */,
 				35CD7EAF26427BBE00724B33 /* Category.swift */,
 				35CD7EB126427BDD00724B33 /* Color.swift */,
 				3531F1CF2649BA6C00BF62D2 /* User.swift */,
+				35DAD179264A7D80000A9C79 /* UserCount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,12 +230,14 @@
 				35A022C3263C92BB000535D0 /* AppDelegate.swift in Sources */,
 				35CD7EB92642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift in Sources */,
 				35A022C5263C92BB000535D0 /* SceneDelegate.swift in Sources */,
+				35DAD17A264A7D80000A9C79 /* UserCount.swift in Sources */,
 				35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */,
 				35CD7EBC264301A600724B33 /* Settings.swift in Sources */,
 				35CD7EAE26427B6E00724B33 /* Habit.swift in Sources */,
 				35CD7EB72642CB4100724B33 /* APIService.swift in Sources */,
 				3531F1D02649BA6C00BF62D2 /* User.swift in Sources */,
 				35CD7EA926417DC700724B33 /* HabitDetailViewController.swift in Sources */,
+				35DAD178264A7D44000A9C79 /* HabitStatistics.swift in Sources */,
 				35CD7EB526427CCE00724B33 /* APIRequest.swift in Sources */,
 				35CD7EA526417CFF00724B33 /* UserCollectionViewController.swift in Sources */,
 			);
