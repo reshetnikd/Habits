@@ -32,6 +32,7 @@
 		35DAD17A264A7D80000A9C79 /* UserCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD179264A7D80000A9C79 /* UserCount.swift */; };
 		35DAD17C264AA594000A9C79 /* UserStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD17B264AA594000A9C79 /* UserStatistics.swift */; };
 		35DAD17E264AA5DA000A9C79 /* HabitCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD17D264AA5DA000A9C79 /* HabitCount.swift */; };
+		35DAD180264ABFDD000A9C79 /* LoggedHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD17F264ABFDD000A9C79 /* LoggedHabit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		35DAD179264A7D80000A9C79 /* UserCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCount.swift; sourceTree = "<group>"; };
 		35DAD17B264AA594000A9C79 /* UserStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatistics.swift; sourceTree = "<group>"; };
 		35DAD17D264AA5DA000A9C79 /* HabitCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCount.swift; sourceTree = "<group>"; };
+		35DAD17F264ABFDD000A9C79 /* LoggedHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedHabit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				3531F1CF2649BA6C00BF62D2 /* User.swift */,
 				35DAD179264A7D80000A9C79 /* UserCount.swift */,
 				35DAD17B264AA594000A9C79 /* UserStatistics.swift */,
+				35DAD17F264ABFDD000A9C79 /* LoggedHabit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				35A022C5263C92BB000535D0 /* SceneDelegate.swift in Sources */,
 				35DAD17A264A7D80000A9C79 /* UserCount.swift in Sources */,
 				35CD7EBE26441C0C00724B33 /* UICollectionVieDiffableDataSource+ViewModel.swift in Sources */,
+				35DAD180264ABFDD000A9C79 /* LoggedHabit.swift in Sources */,
 				35CD7EBC264301A600724B33 /* Settings.swift in Sources */,
 				35DAD17C264AA594000A9C79 /* UserStatistics.swift in Sources */,
 				35DAD17E264AA5DA000A9C79 /* HabitCount.swift in Sources */,
