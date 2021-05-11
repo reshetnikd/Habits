@@ -12,6 +12,8 @@ struct Settings {
     
     private let defaults = UserDefaults.standard
     
+    let currentUser = User(id: "user41", name: "Dmitry Reshetnik", color: Color(hue: 0.41, saturation: 0.41, brightness: 0.41), bio: "iOS Software Engineer")
+    
     var favoriteHabits: [Habit] {
         get {
             return unarchiveJSON(key: Setting.favoriteHabits) ?? []
