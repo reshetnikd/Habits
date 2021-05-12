@@ -41,6 +41,23 @@ class UserCollectionViewController: UICollectionViewController {
         update()
     }
     
+    override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { elements in
+            guard let item = self.dataSource.itemIdentifier(for: indexPath) else {
+                return nil
+            }
+            
+            let followedToggle = UIAction(title: item.isFollowed ? "Unfollow" : "Follow") { action in
+                Settings.shared.toggleFollowed(user: item.user)
+                self.updateCollectionView()
+            }
+            
+            return UIMenu(title: "", image: nil, identifier: nil, options: [], children: [followedToggle])
+        }
+        
+        return config
+    }
+    
     func update() {
         UserRequest().send { result in
             switch result {
