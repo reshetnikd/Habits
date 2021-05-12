@@ -10,6 +10,8 @@ import UIKit
 private let sectionHeaderKind = "SectionHeader"
 private let sectionHeaderIdentifier = "HeaderView"
 
+let favoriteHabitColor = UIColor(hue: 0.15, saturation: 1, brightness: 0.9, alpha: 1)
+
 class HabitCollectionViewController: UICollectionViewController {
     typealias DataSourceType = UICollectionViewDiffableDataSource<ViewModel.Section, ViewModel.Item>
     
@@ -21,7 +23,7 @@ class HabitCollectionViewController: UICollectionViewController {
             var sectionColor: UIColor {
                 switch self {
                     case .favorites:
-                        return UIColor(hue: 0.15, saturation: 1, brightness: 0.9, alpha: 1)
+                        return favoriteHabitColor
                     case .category(let category):
                         return category.color.uiColor
                 }
@@ -127,11 +129,15 @@ class HabitCollectionViewController: UICollectionViewController {
         dataSource.applySnapshotUsing(sectionIDs: sectionIDs, itemsBySection: itemsBySection)
     }
     
+    func configureCell(_ cell: PrimarySecondaryTextCollectionViewCell, withItem item: HabitCollectionViewController.ViewModel.Item) {
+        cell.primaryTextLabel.text = item.habit.name
+    }
+    
     func createDataSource() -> DataSourceType {
         let dataSource = DataSourceType(collectionView: collectionView) { collectionView, indexPath, item in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Habit", for: indexPath) as! PrimarySecondaryTextCollectionViewCell
             
-            cell.primaryTextLabel.text = item.habit.name
+            self.configureCell(cell, withItem: item)
             
             return cell
         }

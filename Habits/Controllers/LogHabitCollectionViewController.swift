@@ -53,6 +53,19 @@ class LogHabitCollectionViewController: HabitCollectionViewController {
         
         let loggedHabit = LoggedHabit(userID: Settings.shared.currentUser.id, habitName: item.habit.name, timestamp: Date())
         
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
         LogHabitRequest(trackedEvent: loggedHabit).send { _ in }
+    }
+    
+    override func configureCell(_ cell: PrimarySecondaryTextCollectionViewCell, withItem item: HabitCollectionViewController.ViewModel.Item) {
+        cell.primaryTextLabel.text = item.habit.name
+        cell.layer.cornerRadius = 8
+        
+        if Settings.shared.favoriteHabits.contains(item.habit) {
+            cell.backgroundColor = favoriteHabitColor
+        } else {
+            cell.backgroundColor = .systemGray6
+        }
     }
 }
