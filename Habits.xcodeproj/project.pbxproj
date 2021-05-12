@@ -35,6 +35,7 @@
 		35DAD180264ABFDD000A9C79 /* LoggedHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD17F264ABFDD000A9C79 /* LoggedHabit.swift */; };
 		35DAD182264AD009000A9C79 /* LeaderboardHabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD181264AD009000A9C79 /* LeaderboardHabitCollectionViewCell.swift */; };
 		35DAD184264B0576000A9C79 /* CombinedStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD183264B0576000A9C79 /* CombinedStatistics.swift */; };
+		35DAD186264BF5EE000A9C79 /* FollowedUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAD185264BF5EE000A9C79 /* FollowedUserCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		35DAD17F264ABFDD000A9C79 /* LoggedHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedHabit.swift; sourceTree = "<group>"; };
 		35DAD181264AD009000A9C79 /* LeaderboardHabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardHabitCollectionViewCell.swift; sourceTree = "<group>"; };
 		35DAD183264B0576000A9C79 /* CombinedStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedStatistics.swift; sourceTree = "<group>"; };
+		35DAD185264BF5EE000A9C79 /* FollowedUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedUserCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				35CD7EBF264428F500724B33 /* NamedSectionHeaderView.swift */,
 				35CD7EB82642CD0800724B33 /* PrimarySecondaryTextCollectionViewCell.swift */,
 				35DAD181264AD009000A9C79 /* LeaderboardHabitCollectionViewCell.swift */,
+				35DAD185264BF5EE000A9C79 /* FollowedUserCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				35CD7EB526427CCE00724B33 /* APIRequest.swift in Sources */,
 				35CD7EA526417CFF00724B33 /* UserCollectionViewController.swift in Sources */,
 				35DAD182264AD009000A9C79 /* LeaderboardHabitCollectionViewCell.swift in Sources */,
+				35DAD186264BF5EE000A9C79 /* FollowedUserCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

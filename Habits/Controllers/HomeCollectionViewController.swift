@@ -364,10 +364,16 @@ class HomeCollectionViewController: UICollectionViewController {
                     
                     return cell
                 case .followedUser(let user, let message):
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FollowedUser", for: indexPath) as! PrimarySecondaryTextCollectionViewCell
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FollowedUser", for: indexPath) as! FollowedUserCollectionViewCell
                     
                     cell.primaryTextLabel.text = user.name
                     cell.secondaryTextLabel.text = message
+                    
+                    if indexPath.item == collectionView.numberOfItems(inSection: indexPath.section) - 1 {
+                        cell.separatorLineView.isHidden = true
+                    } else {
+                        cell.separatorLineView.isHidden = false
+                    }
                     
                     return cell
             }
@@ -384,6 +390,13 @@ class HomeCollectionViewController: UICollectionViewController {
                 case .leaderboardGroupBackground:
                     view.backgroundColor = UIColor(hue: 0.65, saturation: 0.1, brightness: 0.95, alpha: 1)
                     view.layer.cornerRadius = 12
+                    view.layer.shadowRadius = 3
+                    view.layer.shadowColor = UIColor.systemGray3.cgColor
+                    view.layer.shadowOffset = CGSize(width: 0, height: 2)
+                    view.layer.shadowOpacity = 1
+                    view.layer.masksToBounds = false
+                    view.layer.shouldRasterize = true
+                    view.layer.rasterizationScale = UIScreen.main.scale
                     return view
                 case .leaderboardSectionHeader:
                     let header = view as! NamedSectionHeaderView
