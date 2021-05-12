@@ -89,6 +89,7 @@ class UserCollectionViewController: UICollectionViewController {
             
             cell.primaryTextLabel.text = item.user.name
             cell.contentView.backgroundColor = item.user.color?.uiColor ?? UIColor.systemGray4
+            cell.layer.cornerRadius = 8
             
             return cell
         }
@@ -102,6 +103,7 @@ class UserCollectionViewController: UICollectionViewController {
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.45))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+        group.interItemSpacing = .fixed(20)
         
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 20
