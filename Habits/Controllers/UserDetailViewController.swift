@@ -51,6 +51,7 @@ class UserDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = user.color?.uiColor ?? .white
         userNameLabel.text = user.name
         bioLabel.text = user.bio
         
